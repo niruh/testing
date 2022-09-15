@@ -1,0 +1,245 @@
+$red:#981B1E
+$black: #181818
+$grey: #bababb
+$midgrey: #d1d1d1
+$lightgrey: #e1e2e1
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap')
+
+body
+    font: 12px Helvetica Now Text
+    color: $black
+    line-height: 12px
+    background: #fff
+    margin: 0px
+
+a, a:active
+    color: #999
+    text-decoration: none
+
+.highlight
+    color: $red
+    display: inline
+
+#header
+    background: #eee
+    z-index: -1
+    height: 85vh
+    overflow: hidden
+    box-shadow: 0px 0px 10px rgba(1,1,1,.75)
+
+#header video
+    padding: 0px
+
+#nav 
+    position: fixed
+    left: 0px
+    right: 0px
+    top: 0px
+    //background-image: linear-gradient(#181818 25%, #181818 15%, #181818 45%, #181818 35%, #181818 25%, #181818 15%, transparent)
+    //background: #181818
+    //opacity: .8
+    z-index: 2
+    max-height: 100px
+    box-shadow: 0px 0px 10px rgba(1,1,1,1)
+    display: grid
+    grid-template-columns: 1fr 2fr
+    padding: 10px 100px
+
+.logo
+    max-width: 200px
+    display: block
+    float: left
+    //padding: 25px 0
+
+    img  
+        width: 80%
+.box 
+    z-index: 3
+
+.navi
+    float: right
+    display: block
+    text-align: right
+    top: 50%
+    -ms-transform: translateY(40%)
+    transform: translateY(40%)
+
+    a
+        font-size: 14px
+        text-transform: capitalize
+        margin: 3px 20px
+        display: inline-block
+        animation-name: fadeout
+        animation-duration: .35s
+    
+    a:hover 
+        color: #000
+        animation-name: fade
+        animation-duration: .35s
+    
+    /*a::after
+        content: '-'
+        padding: 0px 2px
+
+
+@keyframes fade
+    from 
+        color: inherit
+    to
+        color: #000
+
+@keyframes fadeout
+    from
+        color: #000
+    to 
+        color: inherit
+
+#nav .bg
+    background: $black
+    opacity: .75
+    z-index: 2!important
+    position: absolute
+    left: 0px
+    right: 0px
+    bottom: 0px
+    top: 0px
+    content: ''
+    //filter: blur(5px) 
+
+#container 
+    //top: calc(95% - 100px)
+    width: 100%
+    margin: 0px auto
+    padding: 20px 0 0px
+
+.title
+    background: $red
+    color: #fff
+    display: inline-block
+    padding: 20px 25px
+    font-size: 35px
+    line-height: 35px
+    text-transform: capitalize
+
+// container styles
+
+.section
+    padding: 0px
+
+    .line 
+        background-color: $red
+        height: 2px
+        width: 65vw
+        position: relative
+    
+    .line::after
+        content: ''
+        width: 10px
+        height: 10px
+        border-radius: 15px
+        background: $red
+        position: absolute
+        right: -8px
+        top: -4px
+
+    .divide
+        display: grid
+        grid-template-columns: 1.5fr 2fr 1fr
+        column-gap: 30px
+        align-items: center
+        width: 95%
+        margin: 50px auto 100px
+    
+    .divide .item:nth-child(2)
+        background: rgba(255,255,255,1)
+        padding: 15px
+        font-size: 25px
+        line-height: 35px
+        //border-left: 1px solid $red
+
+    .divide .item img
+        width: auto
+        height: 350px
+        display: block
+        margin: 0px auto
+        box-shadow: 6px 6px $red
+
+.two
+    background-color: $black
+    //background-image: radial-gradient(30% 40%, #f3f3f3, $lightgrey 20%, $midgrey 45%, $black 80%)
+    padding: 50px 100px 75px
+    min-height: 200px
+    display: block
+    position: relative
+    box-shadow: 0px 0px 5px rgba(1,1,1,.75)
+    min-height: 800px
+
+    .line 
+        background-color: $red
+        height: 2px
+        width: 35vw
+        right: 0px
+        position: absolute
+    
+    .line::after
+        content: ''
+        width: 10px
+        height: 10px
+        border-radius: 15px
+        background: $red
+        position: absolute
+        left: -8px
+        top: -4px
+
+    .quote
+        display: inline-block
+        line-height: 125px
+        color: $lightgrey
+        font-size: 125px
+        //font-family: 'Playfair Display', serif
+        letter-spacing: -10px
+        position: relative
+        z-index: 2
+        margin: 50px 0px 0px
+        background: rgba(1,1,1,.75)
+        padding: 100px
+        text-align: right
+        //border-right: 200px solid $red
+        
+
+    .quote::before
+        content: '"'
+        font: 300px 'Georgia'
+        color: $red
+        height: 10px
+        position: absolute
+        z-index: -1
+        left: 15px
+        top: -10px
+        z-index: 2
+
+    .preview
+        width: 800px
+        display: block
+        margin: 10px auto
+        box-shadow: 0px 0px 5px #000
+        position: absolute
+        z-index: 2
+        left: 50vw
+        top: 400px
+    
+    .preview::after
+        content: ''
+        position: absolute
+        z-index: -1
+        top: 10px 
+        right: 0px
+        left: 10px
+        bottom: 0px
+        width: 100%
+        height: 100%
+        background: $red
+
+    .preview video
+        width: 100%
